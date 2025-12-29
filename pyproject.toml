@@ -18,8 +18,15 @@ classifiers = [
 ]
 
 dependencies = [
+    "mdit-py-plugins",
+    "markdown-it-py[linkify,plugins]==3.0.0",
     "markdown-pdf",
     "mkdocs",
+#    "mkdocs-material",
+    "mermaid-cli",
+    # After build must install Chromium: playright install chromium
+    # See: https://github.com/seigok/mermaid-cli-python
+    # Use a Hatch post-install-commands definition for the environment
 ]
 
 [project.urls]
@@ -58,5 +65,5 @@ packages = [
 
 [tool.hatch.envs.course.scripts]
 pdf = ["genpdf mkdocs.yml dist/intro-to-programming.pdf"]
-html = ["mkdocs build"]
+html = ["mkdocs build --no-directory-urls"]
 serve = ["mkdocs serve"]

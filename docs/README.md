@@ -1,29 +1,20 @@
-# Introduction to Code on the Go
+# Introduction to Programming in Java
 
-Welcome to programming in Java with *Code on the Go*. This course is
-designed for those with little experience in programming, or little
-experience in Java.
+This book is an introduction to programming in Java using the Code on
+the Go programming environment on your Android device. It assumes
+little to no knowledge of programming or the Android system. Those
+with prior knowledge of programming can still find this useful, but
+may wish to skip to sections of more interest.
 
-## Course Objectives
+## Learning objectives
 
-At the end of this course you should be able to:
-* read and write simple Java programs
-* use the *Code on the Go* application to build your projects and install them into Android
-* understand the basics of Android programming
+At the end of this course, learners can:
 
-## Introducing the AppDev4All Environment
-
-
-
-![Code on the go main screen](images/code-on-the-go-main-screen.jpg)
-
-### Third-level header
-
-| label | value
-| :--: | -- |
-| a | 4 |
-| b | 5 |
-
-## Your First Application
-
-# Another top-level heading
+- Use the IDE to create new projects and manage existing projects
+- Use variables of both primitive and object type
+- Write expressions using both operators and method calls
+- Use control flow statements to implement program logic
+- Modify classes and write new classes
+- Use language directives to import library classes into an application
+- Use library documentation
+- Write documentation and unit tests

@@ -1,3 +1,10 @@
 site_name: Introduction to Programming with Java
+markdown_extensions:
+  - footnotes
+  - tables
+  - abbr
 nav:
 - Introduction: README.md
+- Intro to COTG: intro-to-cotg.md
+- Java concepts: java-concepts.md
+- Answers: answers.md

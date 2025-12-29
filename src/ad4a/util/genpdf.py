@@ -9,6 +9,15 @@ from markdown_pdf import (
     MarkdownPdf,
     Section
 )
+from mdit_py_plugins import (
+    footnote,
+    deflist,
+    tasklists,
+    field_list,
+    admon,
+    dollarmath,
+    subscript
+)
 
 
 def main():
@@ -24,9 +33,18 @@ def main():
     docs_dir = base_dir / 'docs'
     result_path = Path(args.result).absolute()
 
-    # Move to the config directory so relative links work.
-    os.chdir(base_dir)
-    pdf = MarkdownPdf(toc_level=3, optimize=True)
+    pdf = MarkdownPdf(toc_level=3)
+    pdf.m_d.use(footnote.footnote_plugin) # Doesn't work
+    pdf.m_d.use(deflist.deflist_plugin) # Works!
+    pdf.m_d.use(tasklists.tasklists_plugin) # Doesn't work
+    pdf.m_d.use(field_list.fieldlist_plugin) # Doesn't work
+    pdf.m_d.use(admon.admon_plugin) # Doesn't work
+    pdf.m_d.use(dollarmath.dollarmath_plugin) # Doesn't work
+    pdf.m_d.use(subscript.sub_plugin) # Works!
+
+    # Move to the documents directory so relative links work.
+    os.chdir(docs_dir)
+
     for f in config['nav']:
         if isinstance(f, str):
             file_path = docs_dir / f
