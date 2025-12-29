@@ -10,6 +10,8 @@ From the main menu, click the _Terminal_ button. This should change the screen t
 
 ## The Android terminal window
 
+**NOTE**: Ideally something like `jshell` (which can be accessed programmatically using the JDK, BTW) would be built-in to Code on the Go, so the instructions on how to start and stop the `jshell` would be different, and would not involve an actual Linux shell.
+
 The terminal window is called a _shell_ window. It allows you to perform command-line operations in the underlying Linux operating system. One such command is `ls`, which stands for "list files." (Linux has many commands with very short abbreviations like this.) Try that command out by typing `ls` followed by Enter like this:
 
 ```
@@ -18,7 +20,7 @@ android-sdk  maven
 - $
 ```
 
-Your result should look something like this, but may not match exactly. In this case there re two items in the current directory, `android-sdk` and `maven`.
+Your result should look something like this, but may not match exactly. In this case there are two items in the current directory, `android-sdk` and `maven`.
 
 We will cover other useful shell commands later. But for now we want to run a special command that starts a _Java shell_ called `jshell` where we can try out Java features. Start `jshell` by typing `jshell` followed by Enter.
 
@@ -64,9 +66,11 @@ jshell>
 
 This tells us there is only one variable defined so var. `jshell` is telling us three things about the variable:
 
-- The variable's _type_: `String`
+- The variable's _type_: `String`, which is a Java _class_
 - The variable's name: `message`
 - The current value: `"hello"`
+
+In other words, the value of the variable `message` is an _instance_ of the class _String_. An instance of a class is also called an _object_.
 
 ## Types
 
@@ -78,11 +82,11 @@ All variables have a data type. There are many types that come with Java and the
 - Characters: `char`
 - Strings of characters: `String`
 
-All of these are _primitive types_ except `String`, which is an _object type_. We will talk more about the difference in the next section.
+All of these are _primitive types_ except the _class_ `String`, which is an _object type_. We will talk more about the difference in the next section.
 
 ## Objects and methods
 
-We have a single variable now, `message`, which holds the value `"hello"`. What can we do with this variable? Here are a few things to try:
+We have a single variable now, `message`, which holds the value `"hello"`, an _instance_ of the class `String`. What can we do with this variable? Here are a few things to try:
 
 ```
 jshell> message.length()

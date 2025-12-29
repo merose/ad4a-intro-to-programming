@@ -89,7 +89,7 @@ To reopen the project, go to the _Recent projects_ list from the main menu by cl
 
 Congratulations! You have created your first Android application. Of course, it does not do anything yet. We have to learn some Java fundamentals before we can add functionality to create an application that is useful.
 
-## Things to try
+## Exercises
 
 1. See if you can change the message that shows up in the application. Open the file `activity_main.xml` in the directory `src/res/layout` and find where the message "Hello user!" is defined. Change it to "Goodbye user!" and build and reinstall the application. Make sure the message is changed when the application runs.
 

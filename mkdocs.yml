@@ -3,8 +3,10 @@ markdown_extensions:
   - footnotes
   - tables
   - abbr
+theme: readthedocs
 nav:
 - Introduction: README.md
-- Intro to COTG: intro-to-cotg.md
+- Introducing Code on the Go: intro-to-cotg.md
 - Java concepts: java-concepts.md
+- First console program: console-program.md
 - Answers: answers.md

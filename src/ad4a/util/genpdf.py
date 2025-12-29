@@ -34,7 +34,7 @@ def main():
     result_path = Path(args.result).absolute()
 
     pdf = MarkdownPdf(toc_level=3)
-    pdf.m_d.use(footnote.footnote_plugin) # Doesn't work
+    pdf.m_d.use(footnote.footnote_plugin) # Works!
     pdf.m_d.use(deflist.deflist_plugin) # Works!
     pdf.m_d.use(tasklists.tasklists_plugin) # Doesn't work
     pdf.m_d.use(field_list.fieldlist_plugin) # Doesn't work

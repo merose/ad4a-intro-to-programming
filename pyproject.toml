@@ -62,6 +62,9 @@ packages = [
 ]
 
 [tool.hatch.envs.course]
+post-install-commands = [
+    "playwright install chromium"
+]
 
 [tool.hatch.envs.course.scripts]
 pdf = ["genpdf mkdocs.yml dist/intro-to-programming.pdf"]

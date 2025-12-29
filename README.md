@@ -6,6 +6,16 @@ into a PDF or HTML pages using scripts.
 
 ## Setup
 
+### Prerequisites
+
+This course is distributed from source as a Python project. This
+allows the definition of Python scripts to convert the course to HTML
+or PDF using Python libraries. You must have Python 3.9+ installed to build
+the course from source.
+
+After ensuring that Python is installed, continue with the rest of the
+setup, either using Hatch (recommended) or using a virtual environment.
+
 ### Recommended Setup, Using Hatch
 
 You can install Hatch in a virtual environment, if you want. However,
@@ -16,6 +26,9 @@ thing I install in the global environment.
 
 1. Install Hatch: `pip install hatch`\
 (Or `pip install --user hatch` if you prefer)
+
+Once Hatch is installed, there is no setup required when you return
+working on the project.
 
 ### Alternate Install, without Hatch
 
