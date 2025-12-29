@@ -14,7 +14,8 @@ environments automatically when building, starting shells, or running
 scripts, I don't find that it's necessary. That is, Hatch is the only
 thing I install in the global environment.
 
-1. Install Hatch: `pip install hatch`
+1. Install Hatch: `pip install hatch`\
+(Or `pip install --user hatch` if you prefer)
 
 ### Alternate Install, without Hatch
 
@@ -36,11 +37,16 @@ the changes.
 
 ### If using Hatch
 
-* Viewing content as HTML: `hatch run course:serve`\
-    Then browse to: http://localhost:8000/
-* Converting content to a PDF in `site/`: `hatch run course:pdf`\
 * Converting content to HTML in `dist/html/`: `hatch run course:html`\
     Then open: `site/index.html`
+* Converting content to a PDF in `site/`: `hatch run course:pdf`\
+
+You can also view the content from a `mkdocs` web server. However,
+auto-update after changes does not seem to be working, so this is less
+convenient than converting to HTML and loading from a file URL.
+
+* Viewing content as HTML: `hatch run course:serve`\
+    Then browse to: http://localhost:8000/
 
 ### If not using Hatch
 

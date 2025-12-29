@@ -66,4 +66,4 @@ packages = [
 [tool.hatch.envs.course.scripts]
 pdf = ["genpdf mkdocs.yml dist/intro-to-programming.pdf"]
 html = ["mkdocs build --no-directory-urls"]
-serve = ["mkdocs serve"]
+serve = ["mkdocs serve --watch docs --open"]
